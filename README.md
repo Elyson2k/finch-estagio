@@ -93,3 +93,7 @@ Basicamente no projeto, temos dentro da pasta service a seguinte estrutura:
 Assim, com esse padrão de projeto, para cada vez que tiver uma nova implementação de algum site, crio um arquivo com o nome Browse<NomeDoSite>Service, e faço a implementação desse site. 
 
 Referencia: https://refactoring.guru/pt-br/design-patterns/strategy
+
+# Modelo de Banco de Dados
+![image](https://user-images.githubusercontent.com/104575935/209751558-26e3aa99-88ac-4a16-8880-ad21627888ee.png)
+
