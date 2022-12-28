@@ -6,7 +6,7 @@ Somos uma empresa que fazemos cotação de preços e precisamos de uma automaç�
 
 ### ESPECIFICAÇÕES:
 
-- Site de vendas: MercadoLivre (www.americanas.com.br) ou similar
+- Site de vendas: MercadoLivre (www.mercadolivre.com.br) ou similar
 - Produto a ser pesquisado: Webcam
  
 ### CRITÉRIOS DE ENTREGA:
