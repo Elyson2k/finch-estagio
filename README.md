@@ -1,4 +1,4 @@
-# Desafio Backend para vaga de estágio
+# Desafio Backend para vaga de estágio na Finch
 
 ### PROBLEMA
 
@@ -96,4 +96,9 @@ Referencia: https://refactoring.guru/pt-br/design-patterns/strategy
 
 # Modelo de Banco de Dados
 ![image](https://user-images.githubusercontent.com/104575935/209751558-26e3aa99-88ac-4a16-8880-ad21627888ee.png)
+
+
+
+
+https://user-images.githubusercontent.com/104575935/209971919-1a1c3de3-facf-4f92-a9a5-37265ae189c5.mp4
 
