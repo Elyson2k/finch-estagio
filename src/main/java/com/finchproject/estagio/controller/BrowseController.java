@@ -20,6 +20,7 @@ import java.util.List;
 public class BrowseController implements Serializable {
 
     private final Logger logger = LoggerFactory.getLogger(BrowseController.class);
+
     private final BrowseServiceStrategy browseServiceStrategy;
 
     private final SearchHistoricService searchHistoricService;
@@ -29,16 +30,19 @@ public class BrowseController implements Serializable {
         this.searchHistoricService = searchHistoricService;
     }
 
-
-    @GetMapping("/produtos/{productName}")
-    public ResponseEntity<List<ProductDto>> findProducts(@PathVariable String productName, @RequestParam MarketplaceOption marketplace) {
+    @GetMapping("/products/{productName}")
+    public ResponseEntity<List<ProductDto>> findProducts(@PathVariable String productName, @RequestParam MarketplaceOption marketplace) throws InterruptedException {
+        logger.info("m=findProducts stage=init productName={}, marketPlace={}", productName, marketplace);
         List<ProductDto> listProducts = browseServiceStrategy.getService(marketplace.name()).browseProductByName(productName);
+        logger.info("m=findProducts stage=finish listProducts={}", listProducts);
         return ResponseEntity.ok(listProducts);
     }
 
-    @GetMapping("/history-search")
+    @GetMapping("/historic-search")
     public ResponseEntity<List<SearchHistoryDto>> findHistoryProductsSearchered(){
+        logger.info("m=findHistoryProductsSearchered stage=init");
         List<SearchHistoryDto> listDto = searchHistoricService.findHistory().stream().map(item -> new SearchHistoryDto(item)).toList();
+        logger.info("m=findHistoryProductsSearchered stage=finish listDto={}", listDto);
         return ResponseEntity.ok(listDto);
     }
 }

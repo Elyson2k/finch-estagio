@@ -56,7 +56,7 @@ public class BrowseControllerTest {
 
     @Test
     @DisplayName("Buscar produtos por nome + site")
-    void findProducts() {
+    void findProducts() throws InterruptedException {
 
         ResponseEntity<List<ProductDto>> listDto = browseController.findProducts(WEBCAM, MarketplaceOption.MERCADOLIVRE);
         listDto.getBody().add(productDto);
