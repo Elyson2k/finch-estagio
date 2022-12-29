@@ -15,7 +15,6 @@ public class SeleniumConfiguration {
     @Bean
     public WebDriver webDriver() {
 
-        // Inicialize o Selenium aqui, por exemplo:
         System.setProperty("webdriver.chrome.driver", "src\\drive\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -28,7 +27,6 @@ public class SeleniumConfiguration {
         options.setExperimentalOption("useAutomationExtension", false);
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 
-        // new ChromeOptions().setHeadless(true)
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 
