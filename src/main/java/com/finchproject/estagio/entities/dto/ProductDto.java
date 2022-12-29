@@ -8,14 +8,15 @@ public class ProductDto {
     private String title;
     private BigDecimal price;
 
-    public ProductDto (ProductModel productModel) {
-        this.title = productModel.getTitle();
-        this.price = productModel.getPrice();
-    }
 
     public ProductDto(String title, BigDecimal price) {
         this.title = title;
         this.price = price;
+    }
+
+    public ProductDto(ProductModel obj) {
+        this.title = obj.getTitle();
+        this.price = obj.getPrice();
     }
 
     public String getTitle() {

@@ -1,4 +1,18 @@
 spring:
+  application:
+    name: finchestagio
+  datasource:
+    url: jdbc:mysql://localhost:3307/finch-db
+    username: root
+    password: finch
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
   h2:
     console:
       enabled: true

@@ -45,16 +45,6 @@ class ProductServiceTest {
         assertEquals(new BigDecimal("123"), list.get(0).getPrice());
     }
 
-
-
-
-    //
-    // =============================== FUNÇÕES ==========================================
-    //
-
-
-
-
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);

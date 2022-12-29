@@ -7,17 +7,16 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class SearchHistoryDto {
 
-    private UUID id;
+    private Integer id;
     private String productSearched;
     private LocalDateTime createdDate;
     private LocalDate expirationDate;
     private List<ProductModel> products = new ArrayList<>();
 
-    public SearchHistoryDto(UUID id, String productSearched, LocalDateTime createdDate, LocalDate expirationDate, List<ProductModel> products) {
+    public SearchHistoryDto(Integer id, String productSearched, LocalDateTime createdDate, LocalDate expirationDate, List<ProductModel> products) {
         this.id = id;
         this.productSearched = productSearched;
         this.createdDate = createdDate;

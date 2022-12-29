@@ -5,14 +5,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name="tb_search_history")
 public class SearchHistoricModel {
     @Id
-    @GeneratedValue
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String productSearched;
     private LocalDateTime createdDate;
     private LocalDate expirationDate;
@@ -34,11 +33,11 @@ public class SearchHistoricModel {
         this.products = products;
     }
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 
-    public SearchHistoricModel setId(UUID id) {
+    public SearchHistoricModel setId(Integer id) {
         this.id = id;
         return this;
     }

@@ -1,21 +1,26 @@
 package com.finchproject.estagio.entities;
 
+import org.openqa.selenium.WebElement;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
 @Table(name = "tb_product")
 public class ProductModel implements Serializable {
 
     @Id
-    @GeneratedValue
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String title;
     private BigDecimal price;
     private LocalDateTime createdDate;
+
+    public ProductModel(WebElement item) {
+        this.title = item.getText();
+    }
 
     @PrePersist
     private void startCreationDate() {
@@ -24,13 +29,13 @@ public class ProductModel implements Serializable {
 
     public ProductModel(){};
 
-    public ProductModel(UUID id, String title, BigDecimal price) {
+    public ProductModel(Integer id, String title, BigDecimal price) {
         this.id = id;
         this.title = title;
         this.price = price;
     }
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 
